@@ -65,6 +65,7 @@
     "gray-matter": "^4.0.3",
     "hast-util-from-html": "^2.0.3",
     "hastscript": "^9.0.1",
+    "js-yaml": "^4.3.2",
     "katex": "^0.18.7",
     "l2d-widget": "^0.1.1",
     "marked": "^18.0.12",

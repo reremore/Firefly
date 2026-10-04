@@ -9,6 +9,13 @@ import { extname, resolve } from "node:path";
 import { fields } from "./schema";
 import { readSnapshot } from "./read-config";
 import { patchProperty, patchWholeFile } from "./patch-config";
+import {
+	deleteContent,
+	isContentType,
+	listContent,
+	readContent,
+	saveContent,
+} from "./content";
 import { saveImage } from "./upload";
 import { absFromRoot, projectRoot } from "./paths";
 
@@ -110,7 +117,7 @@ async function handle(req: IncomingMessage, res: ServerResponse): Promise<void> 
 		if (req.method === "GET" && (pathname === "/" || pathname === "/index.html")) {
 			return servePublicFile(res, "index.html");
 		}
-		if (req.method === "GET" && (pathname === "/app.js" || pathname === "/style.css")) {
+		if (req.method === "GET" && /^\/[\w.-]+\.(js|css)$/.test(pathname)) {
 			return servePublicFile(res, pathname.slice(1));
 		}
 
@@ -147,6 +154,79 @@ async function handle(req: IncomingMessage, res: ServerResponse): Promise<void> 
 				changed.push(field.file);
 			}
 			return sendJson(res, 200, { ok: true, changed: [...new Set(changed)] });
+		}
+
+		// ── API：内容（文章 / 动态）列表 ──────────────────
+		if (req.method === "GET" && pathname === "/api/content/list") {
+			const type = url.searchParams.get("type") || "";
+			if (!isContentType(type)) {
+				return sendJson(res, 400, { ok: false, error: "type 必须为 post 或 dynamic" });
+			}
+			return sendJson(res, 200, { ok: true, items: listContent(type) });
+		}
+
+		// ── API：读取单篇内容 ────────────────────────────
+		if (req.method === "GET" && pathname === "/api/content/item") {
+			const type = url.searchParams.get("type") || "";
+			const file = url.searchParams.get("file") || "";
+			if (!isContentType(type)) {
+				return sendJson(res, 400, { ok: false, error: "type 必须为 post 或 dynamic" });
+			}
+			try {
+				return sendJson(res, 200, { ok: true, ...readContent(type, file) });
+			} catch (e) {
+				return sendJson(res, 400, { ok: false, error: (e as Error).message });
+			}
+		}
+
+		// ── API：保存内容（新建 / 更新） ──────────────────
+		if (req.method === "POST" && pathname === "/api/content/save") {
+			const body = await readBody(req);
+			let payload: {
+				type?: string;
+				file?: string;
+				data?: Record<string, unknown>;
+				content?: string;
+			};
+			try {
+				payload = JSON.parse(body.toString("utf8"));
+			} catch {
+				return sendJson(res, 400, { ok: false, error: "请求体不是合法 JSON" });
+			}
+			if (!isContentType(payload.type || "")) {
+				return sendJson(res, 400, { ok: false, error: "type 必须为 post 或 dynamic" });
+			}
+			try {
+				const result = await saveContent(
+					payload.type as "post" | "dynamic",
+					payload.file,
+					payload.data || {},
+					payload.content || "",
+				);
+				return sendJson(res, 200, { ok: true, ...result });
+			} catch (e) {
+				return sendJson(res, 400, { ok: false, error: (e as Error).message });
+			}
+		}
+
+		// ── API：删除内容 ────────────────────────────────
+		if (req.method === "POST" && pathname === "/api/content/delete") {
+			const body = await readBody(req);
+			let payload: { type?: string; file?: string };
+			try {
+				payload = JSON.parse(body.toString("utf8"));
+			} catch {
+				return sendJson(res, 400, { ok: false, error: "请求体不是合法 JSON" });
+			}
+			if (!isContentType(payload.type || "")) {
+				return sendJson(res, 400, { ok: false, error: "type 必须为 post 或 dynamic" });
+			}
+			try {
+				deleteContent(payload.type as "post" | "dynamic", payload.file || "");
+				return sendJson(res, 200, { ok: true });
+			} catch (e) {
+				return sendJson(res, 400, { ok: false, error: (e as Error).message });
+			}
 		}
 
 		// ── API：上传图片 ────────────────────────────────

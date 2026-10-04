@@ -23,9 +23,22 @@
 			</div>
 		</header>
 
-		<div class="layout">
-			<nav id="sections" class="sections"></nav>
-			<main id="fields" class="fields"></main>
+		<nav class="tabs">
+			<button class="tab active" data-tab="config">配置</button>
+			<button class="tab" data-tab="post">文章</button>
+			<button class="tab" data-tab="dynamic">动态</button>
+		</nav>
+
+		<div class="workspace">
+			<div id="view-config" class="view">
+				<div class="layout">
+					<nav id="sections" class="sections"></nav>
+					<main id="fields" class="fields"></main>
+				</div>
+			</div>
+
+			<div id="view-content" class="view hidden"></div>
+
 			<aside id="preview" class="preview hidden">
 				<div class="preview-bar">
 					<span>网站实时预览</span>
@@ -37,5 +50,6 @@
 
 		<div id="toast" class="toast"></div>
 		<script src="/app.js"></script>
+		<script src="/content.js"></script>
 	</body>
 </html>

@@ -409,6 +409,25 @@ function togglePreview(force) {
 	}
 }
 
+// ── 页签切换 ───────────────────────────────────────────────
+function switchTab(tab) {
+	for (const t of document.querySelectorAll(".tab")) {
+		t.classList.toggle("active", t.dataset.tab === tab);
+	}
+	const isConfig = tab === "config";
+	$("#view-config").classList.toggle("hidden", !isConfig);
+	$("#view-content").classList.toggle("hidden", isConfig);
+	// 配置的「保存更改」按钮只在配置页签下有意义
+	$("#btn-save").classList.toggle("hidden", !isConfig);
+
+	if (!window.ContentEditor) return;
+	if (isConfig) {
+		window.ContentEditor.hideAll();
+	} else {
+		window.ContentEditor.open(tab);
+	}
+}
+
 // ── 启动 ───────────────────────────────────────────────────
 async function boot() {
 	try {
@@ -434,6 +453,10 @@ async function boot() {
 	});
 	refreshPreviewStatus();
 	setInterval(refreshPreviewStatus, 5000);
+
+	for (const tab of document.querySelectorAll(".tab")) {
+		tab.addEventListener("click", () => switchTab(tab.dataset.tab));
+	}
 }
 
 boot();
