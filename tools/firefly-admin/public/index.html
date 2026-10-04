@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Firefly 配置编辑器</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<header class="topbar">
+			<div class="brand">
+				<span class="brand-icon">🔥</span>
+				<div>
+					<h1>Firefly 配置编辑器</h1>
+					<p>可视化修改网站配色、图片与文字内容</p>
+				</div>
+			</div>
+			<div class="actions">
+				<span id="preview-status" class="status" title="预览服务状态"></span>
+				<button id="btn-preview" class="btn">预览</button>
+				<button id="btn-refresh-preview" class="btn ghost">刷新预览</button>
+				<button id="btn-save" class="btn primary" disabled>保存更改</button>
+			</div>
+		</header>
+
+		<div class="layout">
+			<nav id="sections" class="sections"></nav>
+			<main id="fields" class="fields"></main>
+			<aside id="preview" class="preview hidden">
+				<div class="preview-bar">
+					<span>网站实时预览</span>
+					<button id="btn-close-preview" class="icon-btn" title="关闭预览">×</button>
+				</div>
+				<iframe id="preview-frame" title="预览"></iframe>
+			</aside>
+		</div>
+
+		<div id="toast" class="toast"></div>
+		<script src="/app.js"></script>
+	</body>
+</html>
