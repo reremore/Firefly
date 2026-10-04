@@ -124,7 +124,7 @@ pnpm admin
 
 ## 📖 配置说明
 
-> 📚 详细配置可参考 [Firefly 使用文档](https://docs-firefly.cuteleaf.cn/) 获取完整指南
+> 📚 详细配置可参考 [配置文件说明](./src/config/README.md) 获取完整指南
 
 ### 设置网站语言
 
@@ -164,8 +164,7 @@ src/
 │   ├── mermaidConfig.ts          # Mermaid 图表配置
 │   ├── plantumlConfig.ts         # PlantUML 图表配置
 │   ├── profileConfig.ts          # 用户资料配置
-│   ├── sidebarConfig.ts          # 侧边栏布局配置
-│   └── sponsorConfig.ts          # 打赏配置
+│   └── sidebarConfig.ts          # 侧边栏布局配置
 ```
 
 ## ⚙️ 文章 Frontmatter

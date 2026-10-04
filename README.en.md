@@ -124,7 +124,7 @@ See the [Astro deployment guide](https://docs.astro.build/en/guides/deploy/) to 
 
 ## 📖 Configuration
 
-> 📚 See the [Firefly docs](https://docs-firefly.cuteleaf.cn/) for the full configuration guide
+> 📚 See the [configuration guide](./src/config/README.md) for the full list of config files
 
 ### Setting the site language
 
@@ -164,8 +164,7 @@ src/
 │   ├── mermaidConfig.ts          # Mermaid diagram configuration
 │   ├── plantumlConfig.ts         # PlantUML diagram configuration
 │   ├── profileConfig.ts          # Profile configuration
-│   ├── sidebarConfig.ts          # Sidebar layout configuration
-│   └── sponsorConfig.ts          # Sponsorship configuration
+│   └── sidebarConfig.ts          # Sidebar layout configuration
 ```
 
 ## ⚙️ Post Frontmatter

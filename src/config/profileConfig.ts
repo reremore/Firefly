@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "小怪兽可提",
 
 	// 个人签名
-	bio: "喵？",
+	bio: "意志产生希望，希望孕育梦想，梦想改变世界",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons

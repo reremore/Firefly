@@ -8,11 +8,13 @@ description: "与优秀的朋友们一起成长"
 {/* ========== 站点信息 ========= */}
 
 export const site = {
-  name: "夏夜流萤",
-  desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
-  url: "https://blog.cuteleaf.cn",
-  avatar: "https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
-  email: "xiaye@msn.com",
+  name: "青空",
+  desc: "小小的我",
+  url: "https://blog.737616.xyz",
+  // 你的头像链接（可在 src/config/profileConfig.ts 里找到头像路径）
+  avatar: "",
+  // 接收友链申请的邮箱
+  email: "",
 };
 
 {/* ========= 注意事项 ========== */}
@@ -35,11 +37,17 @@ export const notes = [
         <div class="flex items-center gap-4 mb-5">
           <div class="relative shrink-0">
             <div class="w-16 h-16 rounded-xl overflow-hidden ring-2 ring-(--primary)/20">
-              <img
-                src={site.avatar}
-                alt={site.name}
-                class="w-full h-full object-cover"
-              />
+              {site.avatar ? (
+                <img
+                  src={site.avatar}
+                  alt={site.name}
+                  class="w-full h-full object-cover"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center bg-(--primary)/10 text-(--primary) text-2xl font-bold">
+                  {site.name.charAt(0)}
+                </div>
+              )}
             </div>
             <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-(--primary) flex items-center justify-center shadow">
               <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
