@@ -237,7 +237,6 @@ All commands are run from the root of the project:
 
 Many thanks to [saicaca](https://github.com/saicaca) for the [fuwari](https://github.com/saicaca/fuwari) template, and to [CuteLeaf](https://github.com/CuteLeaf) for the [Firefly](https://github.com/CuteLeaf/Firefly) theme, on which this project is built.
 
-Some Firefly-related image assets are copyrighted by miHoYo, the developer of [Honkai: Star Rail](https://sr.mihoyo.com/).
 
 ### Tech Stack
 
