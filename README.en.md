@@ -1,330 +1,265 @@
-
-<img src="./docs/images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
-
 <div align="center">
 
-# Firefly
-> A Fresh and Beautiful Astro Static Blog Theme Template
-> 
-> ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
-![pnpm >= 11](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
+# 青空 (Aozora)
+
+> A personal blog built on the [Firefly](https://github.com/CuteLeaf/Firefly) theme — a clean, modern Astro static site
+
+> ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)
+![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
 ![Astro](https://img.shields.io/badge/Astro-7-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-blue)
->
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
-> 
-> [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
->
-> **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
-> 
-> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
-[![Afdian Sponsor](https://img.shields.io/badge/Afdian-Sponsor%20Author-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
+
+> ![GitHub License](https://img.shields.io/github/license/reremore/Firefly)
+
 </div>
 
-
 ---
-📖 README:
-**[简体中文](README.md)** | **[繁體中文](docs/README.zh-TW.md)** | **[English](README.en.md)** | **[日本語](docs/README.ja.md)** | **[한국어](docs/README.ko.md)**
 
-🚀 Quick Guide:
-[**🖥️Live Demo**](https://firefly.cuteleaf.cn/) /
-[**📝Documentation**](https://docs-firefly.cuteleaf.cn/) /
-[**🍀My Blog**](https://blog.cuteleaf.cn)
+📖 README：**[简体中文](README.md)** | **[English](README.en.md)**
 
-⚡ Static Site Generation: Ultra-fast loading speed and SEO optimization based on Astro
+This is my ([reremore](https://github.com/reremore)) personal blog, built on the **Firefly** theme. Firefly is a clean, modern personal-blog theme built on the Astro framework and the Fuwari template, combining a modern web stack with a rich feature set and a highly customizable interface.
 
-🎨 Modern Design: Clean and beautiful interface with customizable theme colors
+On top of Firefly, this project ships an additional **visual configuration editor** (`pnpm admin`), so you can tweak colors, images, and text content without touching any code.
 
-📱 Mobile-Friendly: Perfect responsive experience with mobile-specific optimizations
-
-🔧 Highly Configurable: Most features can be customized through configuration files
+- ⚡ **Static generation**: built on Astro — fast to load, SEO friendly
+- 🎨 **Modern design**: clean and elegant, with 360° theme-color customization
+- 📱 **Mobile friendly**: polished responsive experience, mobile-first optimizations
+- 🔧 **Highly configurable**: most feature modules are customizable via config files
+- 🖱️ **Visual editing**: built-in GUI to change colors / images / text without hand-editing code
 
 <table width="100%" align="center">
   <tr>
     <td colspan="3" align="center">
       <img src="./docs/images/1.webp" >
-      <br>Banner Mode</td>
+      <br>Banner mode</td>
     </td>
   </tr>
   <tr>
-    <td align="center"><img src="./docs/images/3.webp" width="300"><br>Overlay Mode</td>
-    <td align="center"><img src="./docs/images/2.webp" width="300"><br>Fullscreen Wallpaper Mode</td>
-    <td align="center"><img src="./docs/images/4.webp" width="300"><br>Solid Color Mode</td>
+    <td align="center"><img src="./docs/images/3.webp" width="300"><br>Overlay mode</td>
+    <td align="center"><img src="./docs/images/2.webp" width="300"><br>Full-screen wallpaper mode</td>
+    <td align="center"><img src="./docs/images/4.webp" width="300"><br>Solid color mode</td>
   </tr>
 </table>
-<img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
-
->[!TIP]
->
->Firefly is a fresh, beautiful, and modern personal blog theme template based on the Astro framework and the Fuwari template, designed for tech enthusiasts and content creators. It integrates a modern web tech stack, offering rich feature modules and a highly customizable interface so you can easily build a professional and visually appealing personal blog.
->
->**If you refer to or use Firefly component design and related code, please credit Firefly.**
->
->Firefly also preserves the original fuwari layout, which can be freely switched in the configuration file according to your preferences.
->
->**For more layout configurations and demos, please see: [Firefly Layout System Details](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)**
->
->Firefly supports i18n multilingual UI, but except for Simplified Chinese, other languages are AI-translated. If you find any errors, feel free to submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) to help improve them.
 
 ## ✨ Features
 
-### Core Features
+### Core
 
-- [x] **Astro + Tailwind CSS** - Ultra-fast static site generation based on modern tech stack
-- [x] **Smooth Animations** - Swup page transition animations for silky smooth browsing experience
-- [x] **Responsive Design** - Perfect adaptation for desktop, tablet and mobile devices
-- [x] **Multi-language Support** - i18n internationalization ui, supports Simplified Chinese, Traditional Chinese, English, Japanese, Russian, Korean
-- [x] **Full-text Search** - Client-side search based on Pagefind, supports article content indexing.
+- [x] **Astro + Tailwind CSS** - super-fast static site generation on a modern stack
+- [x] **Smooth animations** - Swup page transitions for a silky browsing experience
+- [x] **Responsive design** - optimized for desktop, tablet and mobile
+- [x] **i18n** - UI supports Simplified Chinese, Traditional Chinese, English, Japanese, Russian and Korean
+- [x] **Full-text search** - client-side search powered by Pagefind, with content indexing
 
 ### Personalization
-- [x] **Dynamic Sidebar** - Supports single sidebar, dual sidebar configuration
-- [x] **Article Layout** - Supports list (single column) and grid (multi-column/masonry) layout
-- [x] **Font Management** - Custom font support with rich font selector
-- [x] **Footer Configuration** - HTML content injection, fully customizable
-- [x] **Light/Dark Mode** - Supports light/dark/system three modes
-- [x] **Navbar Customization** - Logo, title, links fully customizable
-- [x] **Wallpaper Mode Switching** - Banner wallpaper, fullscreen wallpaper, fullscreen transparent wallpaper, solid background
-- [x] **Theme Color Customization** - 360° hue adjustment
 
+- [x] **Visual configuration editor** - `pnpm admin` GUI to change colors, images and text
+- [x] **Dynamic sidebar** - single-sidebar or dual-sidebar layout
+- [x] **Post layouts** - list (single column) or grid (multi-column / masonry)
+- [x] **Font management** - custom fonts with a rich font picker
+- [x] **Footer configuration** - HTML content injection, fully customizable
+- [x] **Light / dark mode** - light, dark, or follow-system
+- [x] **Navbar customization** - logo, title and links fully customizable
+- [x] **Wallpaper modes** - banner wallpaper, full-screen wallpaper, overlay wallpaper, solid color
+- [x] **Theme color** - 360° hue adjustment
 
-If you have useful features and optimizations, please submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
+## 🎨 Visual Configuration Editor
 
-## 🚀 Quick Start
+Besides editing the config files under `src/config/` directly, this blog ships a **visual configuration editor** so you can change colors, images and text without touching code:
+
+```bash
+pnpm admin
+```
+
+Then open `http://localhost:5199` in your browser. It supports:
+
+- **Colors**: theme hue, default light/dark mode, card style
+- **Images**: avatar, logo, favicon, desktop / mobile wallpaper (with upload)
+- **Text**: site title, subtitle, description, keywords, announcement, footer HTML, home banner text, and more
+
+Changes are written back to the config files via the TypeScript compiler API, **preserving all existing comments**. Run `pnpm dev` in another terminal to preview the result live.
+
+## 🚀 Getting Started
 
 ### Requirements
 
 - Node.js ≥ 22
-- pnpm ≥ 11
+- pnpm ≥ 9
 
-### Local Development
+### Local development
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Cuteleaf/Firefly.git
+   git clone https://github.com/reremore/Firefly.git
    cd Firefly
    ```
-   
-   **First [Fork](https://github.com/CuteLeaf/Firefly/fork) to your own repository then clone (recommended). Don't forget to Star before Fork!**
 
+2. **Install dependencies:**
    ```bash
-   git clone https://github.com/you-github-name/Firefly.git
-   cd Firefly
-   ```
-3. **Install dependencies:**
-   ```bash
-   # Install pnpm if not installed
+   # Install pnpm first if you don't have it
    npm install -g pnpm
-   
+
    # Install project dependencies
    pnpm install
    ```
 
-4. **Configure blog:**
-   - Edit configuration files in `src/config/` directory to customize blog settings
+3. **Configure the blog:**
+   - Edit the config files under `src/config/` directly, or run `pnpm admin` to use the visual editor
 
-5. **Start development server:**
+4. **Start the dev server:**
    ```bash
    pnpm dev
    ```
-   Blog will be available at `http://localhost:4321`
+   The blog will be available at `http://localhost:4321`
 
-### Platform Hosting Deployment
-- **Refer to the [official guide](https://docs.astro.build/en/guides/deploy/) to deploy your blog to Vercel, Netlify, Cloudflare Pages, EdgeOne Pages, etc.**
-- **Vercel**, **Netlify** and other major platforms auto-deploy, automatically selecting the appropriate adapter based on the environment.
+### Deployment
 
-   Framework Preset: `Astro`
+See the [Astro deployment guide](https://docs.astro.build/en/guides/deploy/) to deploy to Vercel, Netlify, Cloudflare Pages, EdgeOne Pages, and more.
 
-   Root Directory: `./`
-
-   Output Directory: `dist`
-
-   Build Command: `pnpm run build`
-
-   Install Command: `pnpm install`
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+- Framework preset: `Astro`
+- Root directory: `./`
+- Output directory: `dist`
+- Build command: `pnpm run build`
+- Install command: `pnpm install`
 
 ## 📖 Configuration
 
-> 📚 **Detailed Configuration Documentation**: Check [Firefly Documentation](https://docs-firefly.cuteleaf.cn/) for complete configuration guide
+> 📚 See the [Firefly docs](https://docs-firefly.cuteleaf.cn/) for the full configuration guide
 
-### Setting Website Language
+### Setting the site language
 
-To set the default language for your blog, edit the `src/config/siteConfig.ts` file:
+Edit `src/config/siteConfig.ts`:
 
 ```typescript
-// Define site language
+// Define the site language
 const SITE_LANG = "zh_CN";
 ```
 
-**Supported language codes:**
-- `zh_CN` - Simplified Chinese
-- `zh_TW` - Traditional Chinese
-- `en` - English
-- `ja` - Japanese
-- `ru` - Russian
-- `ko` - Korean
+**Supported language codes:** `zh_CN` (Simplified Chinese), `zh_TW` (Traditional Chinese), `en` (English), `ja` (Japanese), `ru` (Russian), `ko` (Korean)
 
-### Configuration File Structure
+### Config file structure
 
 ```
 src/
 ├── config/
-│   ├── index.ts                  # Configuration index file
-│   ├── siteConfig.ts             # Site basic configuration
+│   ├── index.ts                  # Config index
+│   ├── siteConfig.ts             # Basic site configuration
 │   ├── analyticsConfig.ts        # Analytics configuration
 │   ├── announcementConfig.ts     # Announcement configuration
 │   ├── backgroundWallpaper.ts    # Background wallpaper configuration
 │   ├── commentConfig.ts          # Comment system configuration
 │   ├── coverImageConfig.ts       # Cover image configuration
-│   ├── displaySettingsConfig.ts  # Settings panel configuration
+│   ├── displaySettingsConfig.ts  # Display settings panel configuration
 │   ├── dynamicConfig.ts          # Moments page configuration
-│   ├── effectsConfig.ts          # Animation effects config (sakura, etc.)
+│   ├── effectsConfig.ts          # Effects configuration (sakura, etc.)
 │   ├── expressiveCodeConfig.ts   # Code highlighting configuration
 │   ├── fontConfig.ts             # Font configuration
-│   ├── FooterConfig.html           # Footer configuration
+│   ├── FooterConfig.html         # Footer configuration
 │   ├── friendsConfig.ts          # Friend links configuration
 │   ├── galleryConfig.ts          # Gallery configuration
 │   ├── licenseConfig.ts          # License configuration
 │   ├── musicConfig.ts            # Music player configuration
 │   ├── navBarConfig.ts           # Navbar configuration
-│   ├── pioConfig.ts              # Mascot configuration
+│   ├── pioConfig.ts              # Pio (mascot) configuration
 │   ├── mermaidConfig.ts          # Mermaid diagram configuration
 │   ├── plantumlConfig.ts         # PlantUML diagram configuration
-│   ├── profileConfig.ts          # User profile configuration
+│   ├── profileConfig.ts          # Profile configuration
 │   ├── sidebarConfig.ts          # Sidebar layout configuration
-│   └── sponsorConfig.ts          # Sponsor configuration
+│   └── sponsorConfig.ts          # Sponsorship configuration
 ```
 
-
-## ⚙️ Article Frontmatter
+## ⚙️ Post Frontmatter
 
 ```yaml
 ---
 title: My First Blog Post
 published: 2023-09-09
 description: This is the first post of my new Astro blog.
-image: ./cover.jpg  # Or use "api" to enable random cover images
+image: ./cover.jpg  # or use "api" to enable a random cover image
 tags: [Foo, Bar]
 category: Front-end
 draft: false
-lang: zh-CN      # Only set when article language differs from site language in `siteConfig.ts`
-pinned: false    # Pin article
-comment: true    # Enable comments
+lang: zh-CN      # only needed when the post language differs from the site language in siteConfig.ts
+pinned: false    # pin to top
+comment: true    # allow comments
 ---
 ```
 
 ## Moments
 
-Moment files are stored in `src/content/dynamic/`, with one Markdown file per moment. Create one with:
+Moment files live in `src/content/dynamic/` — one Markdown file per moment. Create one quickly with:
 
 ```bash
-pnpm new-d The weather is lovely today
+pnpm new-d Feeling great today, had hotpot with friends
 ```
 
-`pnpm new-dynamic <content>` is the equivalent full command.
+`pnpm new-dynamic <content>` is equivalent to `new-d`.
 
 ```yaml
 ---
 published: 2026-07-15 16:15:29
-pinned: true  # Pin article
-location: China # Location
+pinned: true  # pin to top
+location: China # location
 ---
 
-Moment content supports Markdown.
+Moment content supports Markdown syntax.
 ```
 
-Also supports [Memos](https://www.usememos.com/) as a data source. Configure the `memos` option in `src/config/dynamicConfig.ts` to fetch Memos moments in real-time, with pinned sync and image attachment support. See [Moments documentation](https://docs-firefly.cuteleaf.cn/en/guide/dynamic.html).
+[Memos](https://www.usememos.com/) is also supported as a data source — configure the `memos` option in `src/config/dynamicConfig.ts` to fetch moments in real time, with pinned sync and image attachment support.
 
-## 📖 Markdown Extensions
+## 🧩 Markdown Extensions
 
-In addition to the default [GitHub Flavored Markdown](https://github.github.com/gfm/) support in Astro, there are some additional Markdown features:
+In addition to the [GitHub Flavored Markdown](https://github.github.com/gfm/) supported by Astro by default, several extra Markdown features are included:
 
-- Admonitions - Supports configuration for GitHub, Obsidian, VitePress, and Docusaurus themes ([Preview and Usage](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- GitHub Repository Cards ([Preview and Usage](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- Enhanced Code Blocks based on Expressive Code ([Preview](http://firefly.cuteleaf.cn/posts/code-examples/) / [Documentation](https://expressive-code.com/))
+- Admonitions — GitHub, Obsidian, VitePress and Docusaurus style themes
+- GitHub repository cards
+- Enhanced code blocks powered by Expressive Code
 
 ## 🧞 Commands
 
-All commands need to be executed in the project root directory:
+All commands are run from the root of the project:
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | Install dependencies                                |
-| `pnpm dev`                 | Start local development server at `localhost:4321`  |
-| `pnpm build`               | Build site to `./dist/`                             |
-| `pnpm preview`             | Preview built site locally                          |
-| `pnpm check`               | Check for errors in code                            |
-| `pnpm format`              | Format your code using Biome                        |
-| `pnpm new-post <filename>` | Create new article                                  |
-| `pnpm new-d <content>`     | Create a new moment                                 |
-| `pnpm new-dynamic <content>` | Create a new moment (full command)                |
-| `pnpm astro ...`           | Execute `astro add`, `astro check` and other commands |
-| `pnpm astro --help`        | Display Astro CLI help                              |
+| Command                       | Action                                        |
+| :---------------------------- | :-------------------------------------------- |
+| `pnpm install`                | Install dependencies                          |
+| `pnpm dev`                    | Start the dev server at `localhost:4321`      |
+| `pnpm admin`                  | Start the visual config editor at `localhost:5199` |
+| `pnpm build`                  | Build the site to `./dist/`                   |
+| `pnpm preview`                | Preview the built site locally                |
+| `pnpm check`                  | Check the code for errors                     |
+| `pnpm format`                 | Format the code with Biome                    |
+| `pnpm new-post <filename>`    | Create a new post                             |
+| `pnpm new-d <content>`        | Create a moment                               |
+| `pnpm new-dynamic <content>`  | Create a moment (full command)                |
+| `pnpm astro ...`              | Run commands such as `astro add`, `astro check` |
+| `pnpm astro --help`           | Show the Astro CLI help                       |
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgements
 
-Special thanks to [saicaca](https://github.com/saicaca) for developing the [fuwari](https://github.com/saicaca/fuwari) template, which Firefly is based on for secondary development.
+Many thanks to [saicaca](https://github.com/saicaca) for the [fuwari](https://github.com/saicaca/fuwari) template, and to [CuteLeaf](https://github.com/CuteLeaf) for the [Firefly](https://github.com/CuteLeaf/Firefly) theme, on which this project is built.
 
-The copyright of Firefly-related image assets belongs to [miHoYo](https://www.mihoyo.com/), the developer of the game ["Honkai: Star Rail"](https://sr.mihoyo.com/).
+Some Firefly-related image assets are copyrighted by miHoYo, the developer of [Honkai: Star Rail](https://sr.mihoyo.com/).
 
 ### Tech Stack
 
-- [Astro](https://astro.build) 
-- [Tailwind CSS](https://tailwindcss.com) 
+- [Astro](https://astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
 - [Iconify](https://iconify.design)
 
-### Inspiration Projects
+### Inspirations
 
 - [fuwari](https://github.com/saicaca/fuwari)
 - [hexo-theme-shoka](https://github.com/amehime/hexo-theme-shoka)
 - [astro-koharu](https://github.com/cosZone/astro-koharu)
 - [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
 
-### Other References
-- Blogger `霞葉` [Bangumi Collection](https://kasuha.com/posts/fuwari-enhance-ep2/) page component
-- Bilibili creator `公公的日常` Q-version [Firefly Mascot Spine Model](https://www.bilibili.com/video/BV1fuVzzdE5y)
-
 ## 📝 License
 
 This project is licensed under the [MIT license](https://mit-license.org/). See the [LICENSE](./LICENSE) file for details.
 
-Originally forked from [saicaca/fuwari](https://github.com/saicaca/fuwari). Thanks to the original author for their contributions. 
+**Copyright notice:**
 
-**Copyright Notice:**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
 - Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
 
-Under the MIT license, you are free to use, modify, and distribute the code, but you must retain the above copyright notice.
-
-## 🍀 Contributors
-
-Thanks to the following contributors for their contributions to this project. If you have any questions or suggestions, please submit an [Issue](https://github.com/CuteLeaf/Firefly/issues) or [Pull Request](https://github.com/CuteLeaf/Firefly/pulls).
-
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
->  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
-></a>
-
-Thanks to the following contributors for their contributions to the original project [fuwari](https://github.com/saicaca/fuwari), which laid the foundation for this project.
-
-><a href="https://github.com/saicaca/fuwari/graphs/contributors">
->  <img src="https://contrib.rocks/image?repo=saicaca/fuwari" />
-></a>
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=CuteLeaf/Firefly&type=Date)](https://star-history.com/#CuteLeaf/Firefly&Date)
-
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+Under the MIT license you are free to use, modify and distribute the code, but you must retain the copyright notices above.
